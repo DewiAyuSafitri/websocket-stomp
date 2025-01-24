@@ -16,7 +16,7 @@ const DashboardWithoutSock = () => {
         console.log("Connected to WebSocket With Sock JS");
         stompClient.subscribe("/topic/greetings", (response) => {
           console.log("Received message:", response.body);
-          setMessage(JSON.parse(response.body).content);
+          setMessage(response.body);
         });
       },
       onStompError: (frame) => {
