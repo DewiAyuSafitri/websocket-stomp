@@ -8,9 +8,9 @@ const DashboardWithoutSock = () => {
   useEffect(() => {
     const stompClient = new Client({
       brokerURL: "ws://localhost:8080/test",
-      reconnectDelay: 5000,
+      reconnectDelay: 0,
       debug: (str) => {
-        console.log("With Sock.JS ", str);
+        console.log("Without Sock.JS ", str);
       },
       onConnect: () => {
         console.log("Connected to WebSocket With Sock JS");
@@ -22,6 +22,9 @@ const DashboardWithoutSock = () => {
       onStompError: (frame) => {
         console.error("Broker reported error: " + frame.headers["message"]);
         console.error("Additional details: " + frame.body);
+      },
+      onWebSocketClose: () => {
+        console.error('WebSocket connection field.');
       },
     });
 
