@@ -1,0 +1,10 @@
+.card{
+     /* width: 60%; */
+     box-shadow: black;
+}
+.custom-header {
+     background-color: #1890ff !important;
+     color: white !important;
+     font-weight: bold;
+     text-align: center;
+   }

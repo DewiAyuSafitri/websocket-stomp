@@ -1,12 +1,12 @@
 import "./App.css";
 import React from "react";
-import DashboardWithoutSock from "./component/DashboardWithoutSock";
+
+import MainDashboard from "./pages";
 
 function App() {
   return (
     <>
-      {/* <Dashboard /> */}
-      <DashboardWithoutSock />
+      <MainDashboard />
     </>
   );
 }
