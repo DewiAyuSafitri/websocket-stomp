@@ -1,3 +1,7 @@
+# Ganti URL atau path untuk web socket 
+ganti di file constant.js 
+URL_WEBSOCKET => u/ url websocket
+SUBSCRIBE_PATH => u/ path subscribe data 
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
